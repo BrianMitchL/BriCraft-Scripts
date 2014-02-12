@@ -8,6 +8,11 @@ Scripts used to manage BriCraft (Minecraft server)
 This is a bash script that will find the PID and add it to the screen name of the server (bricraft) so it becomes for example, `49011.bricraft` for the name of the screen. This allows you to run commands within the server windows using `printf`. I use this to give players warnings before the server shuts down. Using the `sleep` command, the script pauses a certain number of seconds before sending more messages to the server. The script then stops the server and creates a tar.bz2 archive of the entire server folder. The script then moves it to another volume, sets the name to the date and a hardcoded version number, and removes the archive from the server volume. Lastly, the script puts my server to sleep. 
 ######Note: I had to allow the `shutdown` command to be run without a sudo password in /etc/sudoers.
 
+##start.command
+
+This script starts the server with a screen session called `bricraft` and allots the server 2 GB of RAM.
+######Note: I run this from within the directory containing `craftbukkit.jar`.
+
 ## Shutdown Server.script
 
 I run this script 15 minutes before I have the server shut down. It will use the `say` command in Terminal (where CraftBukkit runs) will announce how much time until the script will run the `stop` command. There is a `delay` command between the time remaining printouts to keep the time properly.
