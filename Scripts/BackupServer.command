@@ -20,5 +20,5 @@ tar  -jcvf  BriCraft.tar.bz2 BriCraft;
 cp BriCraft.tar.bz2 /Volumes/Media/Media/Minecraft\ Backups/;
 mv /Volumes/Media/Media/Minecraft\ Backups/BriCraft.tar.bz2 /Volumes/Media/Media/Minecraft\ Backups/$(date +%Y-%m-%d)"-1.7.2".tar.bz2;
 rm BriCraft.tar.bz2;
-sudo shutdown -s now;
+osascript -e 'tell application "System Events" to sleep';
 exit
